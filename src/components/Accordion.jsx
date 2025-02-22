@@ -1,16 +1,16 @@
+// import { useState } from "react"
 
-const Accordion = (props) => {
+export default function Accordion({ btns }) {
 
-    const { btns } = props
+    // const { btns } = props //* vedi sopra
 
     return (
         btns.map(e => {
+
             return (
-                <h4 className="text" key={e.id}> {e.title} <br /> {e.description} </h4>
+
+                <h4 key={e.id} >  {e.title} < br /> {e.description} </h4 >
             )
         })
-
-
     )
 }
-export default Accordion

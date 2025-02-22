@@ -1,26 +1,22 @@
-
-import React from "react"
-
+// import { useState } from "react"
 
 
-const Buttons = (props) => {
+export default function Buttons({ btns, handleAccordion }) {
 
-    const { btns } = props
+    // const { btns, handleAccordion } = props //* vedi sopra
 
     return (
 
         <nav>{
 
             btns.map(element => {
-
                 const { id, title } = element
 
                 return (
-                    <button key={id}> <a href="#">{title} </a> </button>
+                    <button key={id} onClick={handleAccordion} >  {title} </button>
                 )
             })
 
         }</nav>
     )
 }
-export default Buttons
