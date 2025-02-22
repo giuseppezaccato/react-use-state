@@ -9,7 +9,8 @@ function App() {
 
   return (
     <>
-      <Header titles={languages} />
+
+      <Header />
       <Main dev={languages} />
     </>
   )

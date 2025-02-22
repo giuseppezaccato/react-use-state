@@ -1,23 +1,19 @@
+// import { useState } from "react"
+import Buttons from "./Buttons"
+import Accordion from "./Accordion"
+
+
 const Main = (props) => {
 
     const { dev } = props
-
+    // const [status, setStatus] = useState(dev.id)
     return (
+        <>
 
-        dev.map(lang => {
+            < Buttons btns={dev} />
+            < Accordion btns={dev} />
 
-            const { id, description, title } = lang
-
-            return (
-
-                <div >
-                    {/* < button key={id} > {title} </button > */}
-                    <div >{description}</div>
-                </div>
-
-            )
-        })
+        </>
     )
 }
-
 export default Main
