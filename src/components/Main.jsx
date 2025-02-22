@@ -11,7 +11,7 @@ const Main = (props) => {
             return (
 
                 <div >
-                    < button key={id} > {title} </button >
+                    {/* < button key={id} > {title} </button > */}
                     <div >{description}</div>
                 </div>
 
