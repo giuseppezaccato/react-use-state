@@ -22,12 +22,33 @@ body {
   align-items: center;
   min-width: 320px;
   min-height: 100vh;
+
+  width: 100%;
+  height: 100%;
+  background-color: #111111;
+  background-image: linear-gradient(32deg,
+      rgba(8, 8, 8, 0.74) 30px,
+      transparent);
+  background-size: 60px 60px;
+  background-position: -5px -5px;
+
+  /* width: 100%;
+  height: 100%;
+  background: #999898;
+  background-image: linear-gradient(90deg,
+      transparent 50px,
+      #ffb4b8 50px,
+      #ffb4b8 52px,
+      transparent 52px),
+    linear-gradient(#7e7e7e 0.1em, transparent 0.1em);
+  background-size: 100% 30px; */
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+
 
 .langBox {
   max-width: 700px;
@@ -42,9 +63,6 @@ h1 {
   line-height: 160%;
   font-family: Menlo, Roboto Mono, monospace;
 }
-
-
-
 
 .flex {
   display: flex;

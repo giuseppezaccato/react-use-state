@@ -9,19 +9,19 @@ const Main = (props) => {
 
     const { dev } = props
     const [openIndex, setOpenIndex] = useState(null)
-    const handleAccordion = (index) => setOpenIndex(openIndex === index ? null : index); //switch ?
+    const handleAccordion = (num) => setOpenIndex(openIndex === num ? null : num); //switch ?
 
     //! il controllo va DENTRO il return!! => sotto i bottoni possibilmente! 
-    //todo e magari concatenalo con la comparsa dell'Accordion
-    openIndex === null ? <p> `non esistono linguaggi selezionati` </p> : null
+    //? e magari concatenalo con la comparsa dell'Accordion
+    // openIndex === null ? <p> `non esistono linguaggi selezionati` </p> : null
 
     return (
         <>
             < Buttons btns={dev} handleAccordion={handleAccordion} openIndex={openIndex} />
+
+            {/* task controllo */}
             {openIndex == null
-                ? <div className="langBox container flex">
-                    <h3>Non hai selezionato alcun linguaggio, selezionane uno!</h3>
-                </div>
+                ? <div className="langBox flex"><h3>Non hai selezionato alcun linguaggio!</h3></div>
                 : < Accordion btns={dev} openIndex={openIndex} />
             }
 

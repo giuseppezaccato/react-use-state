@@ -1,3 +1,4 @@
+//? non è necessario perchè all'onClick seerve solo l'handleAccordion(che mi porto con i props)
 // import { useState } from "react"
 
 
