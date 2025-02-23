@@ -1,16 +1,24 @@
 // import { useState } from "react"
 
-export default function Accordion({ btns }) {
 
-    // const { btns } = props //* vedi sopra
-
+const Accordion = ({ btns, openIndex }) => {
     return (
-        btns.map(e => {
+        <div>
 
-            return (
+            {/* {openIndex != index && <p>`non esistono linguaggi selezionati` </p> */}
+            {btns.map((e, index) => (
+                <div key={e.id}>
 
-                <h4 key={e.id} >  {e.title} < br /> {e.description} </h4 >
-            )
-        })
-    )
-}
+                    {openIndex === index && (
+                        <div className="langBox">
+                            <h2>{e.title}</h2>
+                            <h3>{e.description}</h3>
+                        </div>
+                    )}
+                </div>
+            ))}
+        </div>
+    );
+};
+
+export default Accordion

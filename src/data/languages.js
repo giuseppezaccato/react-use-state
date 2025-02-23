@@ -15,7 +15,7 @@ const languages = [
         id: 3,
         title: "JavaScript",
         description: "Linguaggio di programmazione dinamico che consente di aggiungere interattività alle pagine web, manipolando il DOM, gestendo eventi e integrando funzionalità avanzate.",
-        onFocus: "false"
+        onFocus: "true"
     },
     {
         id: 4,
