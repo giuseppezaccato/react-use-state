@@ -9,12 +9,15 @@ const Main = (props) => {
 
     const { dev } = props
     const [openIndex, setOpenIndex] = useState(null)
-    const handleAccordion = (num) => setOpenIndex(openIndex === num ? null : num); //switch ?
+    const handleAccordion = (num) => setOpenIndex(openIndex === num ? null : num); //? condition 
 
     //! il controllo va DENTRO il return!! => sotto i bottoni possibilmente! 
     //? e magari concatenalo con la comparsa dell'Accordion
     // openIndex === null ? <p> `non esistono linguaggi selezionati` </p> : null
 
+    //? nextExercises ==> usa map nel padre(organizzazione migliore!) anche su componenti 
+    //? o addirittura funzioni custom che lo facciano direttamente
+    //todo rendi i componenti piu RIUTILIZZABILI possibile, sfruttando i props per CARATTERIZZARLI!
     return (
         <>
             < Buttons btns={dev} handleAccordion={handleAccordion} openIndex={openIndex} />
